@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyGestures.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Center">
+            
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Frame BackgroundColor="Red" WidthRequest="300" HeightRequest="200">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                
+                <Frame BackgroundColor="Red" WidthRequest="300" HeightRequest="200">
+                    <Frame.GestureRecognizers>
+                        <DragGestureRecognizer
+                            DragStarting="DragGestureRecognizer_DragStarting"
+                            CanDrag="True"
+                            
+                            />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
